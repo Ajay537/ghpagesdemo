@@ -1,0 +1,4 @@
+1st file
+2nd line to 
+test commits updating
+test merging with command
