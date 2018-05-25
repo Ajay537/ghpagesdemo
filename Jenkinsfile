@@ -25,7 +25,7 @@ pipeline{
         stage('Build') {
             steps {
                build 'mvn'
-               runCommand command:'echo welcome', timeout: '1000'
+               runCommand command:'echo welcome', timeout: 1000
             }
         }
     }
