@@ -29,6 +29,7 @@ pipeline{
             } 
             steps {
                build 'mvn'
+               runCommand ['echo welcome',1000]  
             }
         }
     }
