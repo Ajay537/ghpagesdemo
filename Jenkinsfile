@@ -25,7 +25,7 @@ pipeline{
         stage('Build') {
             steps {
                build 'mvn'
-               runCommand name:'build_na', path: 'aj'
+               setEnv name:'build_na', path: 'aj'
                echo $build_na
             }
         }
