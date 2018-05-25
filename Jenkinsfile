@@ -25,6 +25,7 @@ pipeline{
                 docker {
                     image 'maven:3-alpine' 
                     label 'docker'
+                }
             } 
             steps {
                 echo 'Hello, Maven'
