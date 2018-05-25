@@ -4,10 +4,12 @@
 import org.sample.GlobalVariables
 
 pipeline{
-    
-    agent{
-        label 'docker'
-    }
+    agent {
+        docker {
+            image 'maven:3-alpine' 
+            label 'docker'
+        }
+    } 
     stages{
         stage('start'){
             steps{
@@ -21,15 +23,9 @@ pipeline{
             }
         }
         stage('Build') {
-            agent {
-                docker {
-                    image 'maven:3-alpine' 
-                    label 'docker'
-                }
-            } 
             steps {
                build 'mvn'
-               runCommand command:'echo welcome', timeout: 1000
+               runCommand command:'echo welcome', timeout: '1000'
             }
         }
     }
