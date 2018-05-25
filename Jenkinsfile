@@ -20,7 +20,7 @@ pipeline{
                 println GlobalVariables.name
             }
         }
-        stage('Maven Build') {
+        stage('Build') {
             agent {
                 docker {
                     image 'maven:3-alpine' 
@@ -28,8 +28,7 @@ pipeline{
                 }
             } 
             steps {
-                echo 'Hello, Maven'
-                sh 'mvn --version'
+               build 'mvn'
             }
         }
     }
