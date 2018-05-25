@@ -1,1 +1,1 @@
-# sample repo to test github pages
+# sample piepline that can invoke a shared library 
