@@ -29,7 +29,7 @@ pipeline{
             } 
             steps {
                build 'mvn'
-               runCommand command:'echo welcome', timeout:1000
+               runCommand.call('echo welcome', 1000)
             }
         }
     }
