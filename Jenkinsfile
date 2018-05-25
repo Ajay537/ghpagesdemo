@@ -18,7 +18,7 @@ pipeline{
         }
         stage('testLib'){
             steps{
-                sayHello 'Ajay'
+                sayHello 'Jenkins User'
                 println GlobalVariables.name
             }
         }
