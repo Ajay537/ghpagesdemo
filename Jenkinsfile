@@ -26,7 +26,11 @@ pipeline{
             steps {
                build 'mvn'
                setEnv name:'build_na', path: 'aj'
-                echo env.BUILD_URL
+               echo env.BUILD_URL
+                javaPipeline {
+                    projectName = "samplejavaapp"
+                    appType = "lib"
+                }
             }
         }
     }
